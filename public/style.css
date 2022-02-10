@@ -1,0 +1,49 @@
+/* TYPOGRAPHY */
+
+html {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+/* LAYOUT */
+
+body {
+    max-width: 800px;
+    min-height: 100vh;
+    margin:auto;
+    border-right:1px dotted black;
+    border-left:1px dotted black;
+    padding:1em;
+}
+
+/* FORM INPUTS */
+
+.order-form input, .order-form label, fieldset, button {
+    display: block;
+    margin-top:1em;
+}
+
+.order-form fieldset input, .order-form fieldset label {
+    margin-top: initial;
+}
+
+/* COLOR FORM */
+
+.color-form {
+    position:fixed;
+    bottom:0;
+    right:0;
+    border-radius:.5em 0 0 0;
+    padding:1rem;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
+    background-color: white;
+}
+
+.color-form input, .color-form label {
+    display: block;
+    margin: .5em 0 .5em 0;
+}

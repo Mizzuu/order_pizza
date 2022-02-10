@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Order Form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="color:<% let page=data %>
+  <% if(page!='' ){ %>
+    <%= page %>
+      <% } %>">
+
+  <h1>Order Pizza!</h1>
+
+  <form class="order-form" action="/orders" method="POST" name="orderPizza">
+    <!-- TODO: add form input elements -->
+    <fieldset>
+      <legend>Size</legend>
+      <label>
+        small
+        <input type="radio" value="small" name="size">
+      </label>
+      <label>
+        medium
+        <input type="radio" value="medium" name="size">
+      </label>
+      <label>
+        large
+        <input type="radio" value="large" name="size">
+      </label>
+      <label>
+        extra-large
+        <input type="radio" value="extra-large" name="size">
+      </label>
+    </fieldset>
+
+    <label>Gluten free crust?:
+      <input type="checkbox" name="gluten_free" value="true">
+    </label>
+
+    <fieldset>
+      <legend>Toppings (select between 3 and 5):</legend>
+      <label>
+        Tomato sauce
+        <input type="checkbox" name="toppings" value="tomato sauce">
+      </label>
+      <label>
+        Cheese
+        <input type="checkbox" name="toppings" value="cheese">
+      </label>
+      <label>
+        Pepperoni
+        <input type="checkbox" name="toppings" value="pepperoni">
+      </label>
+      <label>
+        Green peppers
+        <input type="checkbox" name="toppings" value="green peppers">
+      </label>
+      <label>
+        Pineapple
+        <input type="checkbox" name="toppings" value="pineapple">
+      </label>
+      <label>
+        Mushrooms
+        <input type="checkbox" name="toppings" value="mushrooms">
+      </label>
+      <label>
+        Olives
+        <input type="checkbox" name="toppings" value="olives">
+      </label>
+    </fieldset>
+    <label>
+      Your name:
+      <input type="text" name="name">
+    </label>
+    <label>
+      Your email:
+      <input type="text" name="email">
+    </label>
+    <label>
+      Delivery Date (yyyy-mm-dd):
+      <input type="text" name="date">
+    </label>
+    <label>
+      Rate your experience from 1 (terrible) to 5 (excellent)
+      <input type="text" name="rating">
+    </label>
+    <button>Submit!</button>
+    <button type="button" onclick="resetForm()">reset form</button>
+  </form>
+
+
+
+
+  <form class="color-form" action="/" action="GET">
+    <!-- TODO: Create color form -->
+    <label>Color of page:
+      <input type="text" name="color">
+    </label>
+
+    <button>Submit color</button>
+  </form>
+
+  <script>
+    resetForm = () => {
+      document.orderPizza.reset();
+    }
+  </script>
+
+</body>
+
+</html>
